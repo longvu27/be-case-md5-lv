@@ -7,7 +7,7 @@ export class LikeController{
         this.likeService= new LikeService();
     }
     getAll = async (req:Request,res:Response)=>{
-        let likes = await this.likeService.findAll;
+        let likes = await this.likeService.findAll(req,res);
         return res.status(200).json(likes);
     }
 

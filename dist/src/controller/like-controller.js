@@ -5,7 +5,7 @@ const like_service_1 = require("../service/like-service");
 class LikeController {
     constructor() {
         this.getAll = async (req, res) => {
-            let likes = await this.likeService.findAll;
+            let likes = await this.likeService.findAll(req, res);
             return res.status(200).json(likes);
         };
         this.add = async (req, res) => {
