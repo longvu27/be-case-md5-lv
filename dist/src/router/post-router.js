@@ -12,4 +12,5 @@ exports.postRouter.post('/add', post_controller_1.default.add);
 exports.postRouter.put('/:id', post_controller_1.default.edit);
 exports.postRouter.delete('/:id', post_controller_1.default.delete);
 exports.postRouter.get('/find-by-name', post_controller_1.default.finByName);
+exports.postRouter.get('/find-one/:id', post_controller_1.default.findOnePost);
 //# sourceMappingURL=post-router.js.map

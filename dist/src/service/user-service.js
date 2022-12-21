@@ -14,7 +14,7 @@ class UserService {
             return users;
         };
         this.findByName = async (name) => {
-            let users = await this.userRepository.query(`select * from users where name = '%${name}%'`);
+            let users = await this.userRepository.query(`select * from users where name like '%${name}%'`);
             return users;
         };
         this.add = async (user) => {

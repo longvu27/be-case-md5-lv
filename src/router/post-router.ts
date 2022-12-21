@@ -7,4 +7,5 @@ postRouter.post('/add', postController.add);
 postRouter.put('/:id',postController.edit);
 postRouter.delete('/:id',postController.delete);
 postRouter.get('/find-by-name',postController.finByName);
+postRouter.get('/find-one/:id',postController.findOnePost);
 

@@ -10,6 +10,10 @@ export class PostController{
         let posts = await this.postService.findAll();
         return res.status(200).json(posts);
     }
+    findOnePost = async (req:Request,res:Response) =>  {
+        let post = await this.postService.findOnePost(req)
+        return res.status(200).json(post)
+    }
     finByName =async (req:Request,res:Response)=>{
         let post = req.body;
         let postFind = await this.postService.findByName(post.title);
@@ -26,6 +30,7 @@ export class PostController{
     }
     delete= async  (req:Request,res:Response)=>{
         let posts= await this.postService.delete(req,res);
+        console.log(posts)
         return res.status(200).json(posts)
     }
 }

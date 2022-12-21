@@ -3,6 +3,7 @@ export declare class PostService {
     private postRepository;
     constructor();
     findAll: () => Promise<any>;
+    findOnePost: (req: Request) => Promise<any>;
     findByName: (title: any) => Promise<any>;
     add: (req: Request, res: Response) => Promise<any>;
     edit: (req: Request, res: Response) => Promise<any>;

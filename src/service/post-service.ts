@@ -16,6 +16,11 @@ export class PostService{
         let posts = await this.postRepository.find();
        return posts
     }
+    findOnePost = async (req: Request)=> {
+        let id= +req.params.id;
+        let post = await this.postRepository.query(`select * from posts where id = ${id}`)
+        return post
+    }
     findByName = async (title)=>{
         let posts = await this.postRepository.query(`select * from posts where title like '%${title}%'`)
         return posts

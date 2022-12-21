@@ -26,7 +26,7 @@ export class UserController{
         let userFind = await this.userService.login(user.name);
         if (userFind.length == 0){
             return res.status(200).json({
-                massage: 'Người dùng đã tồn tại!!'
+                massage: 'Đăng nhập không thành công!!'
             })
         }else {
             let comparePassword = await bcrypt.compare(user.password, userFind[0].password)

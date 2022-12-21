@@ -3,6 +3,7 @@ export declare class PostController {
     private postService;
     constructor();
     getAll: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+    findOnePost: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
     finByName: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
     add: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
     edit: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
