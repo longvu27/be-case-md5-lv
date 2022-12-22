@@ -9,7 +9,7 @@ export class LikeService {
     }
     findAll = async (req: Request, res: Response) => {
         let likes = await this.postLikeRepository.find();
-        return res.status(200).json(likes);
+        return likes
     }
     add = async (req:Request,res:Response)=>{
         let like = req.body;

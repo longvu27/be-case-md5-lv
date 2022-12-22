@@ -15,8 +15,7 @@ export class PostController{
         return res.status(200).json(post)
     }
     finByName =async (req:Request,res:Response)=>{
-        let post = req.body;
-        let postFind = await this.postService.findByName(post.title);
+        let postFind = await this.postService.findByName(req.query.title);
         return res.status(201).json(postFind)
     }
     add = async (req:Request,res:Response)=>{

@@ -7,7 +7,7 @@ class LikeService {
     constructor() {
         this.findAll = async (req, res) => {
             let likes = await this.postLikeRepository.find();
-            return res.status(200).json(likes);
+            return likes;
         };
         this.add = async (req, res) => {
             let like = req.body;

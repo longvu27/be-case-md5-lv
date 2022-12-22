@@ -13,8 +13,7 @@ class PostController {
             return res.status(200).json(post);
         };
         this.finByName = async (req, res) => {
-            let post = req.body;
-            let postFind = await this.postService.findByName(post.title);
+            let postFind = await this.postService.findByName(req.query.title);
             return res.status(201).json(postFind);
         };
         this.add = async (req, res) => {
